@@ -2,6 +2,8 @@
 
 **65010077 - นายกิตติพศ หลำบางช้าง**
 
+รายวิชา Programming Fundamental (01076103) คณะวิศวกรรมศาสตร์ สาขาวิศวกรรมคอมพิวเตอร์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+
 > [Classroom Website](https://sites.google.com/kmitl.ac.th/programming-fundamental/home?pli=1&authuser=1)
 
 ### Curriculum
@@ -18,7 +20,7 @@ Week | Description | sheet
 
 ### Todo
 * Weekly Program
-  - [ ] Week 2  
+  - [x] Week 2  
   - [ ] Week 3
   - [ ] Week 4
   - [ ] Week 5
