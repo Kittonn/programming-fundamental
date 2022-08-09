@@ -2,10 +2,20 @@
 
 #include <stdio.h>
 
+long int factorial(int n)
+{
+  if (n == 0)
+  {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+
 int main()
 {
-  int n[2];
-  scanf("%d %d", &n[0], &n[1]);
-  printf("%d\n%d\n%d\n%d", n[0] + n[1], n[0] - n[1], n[0] * n[1], n[0] / n[1]);
+  int n;
+  printf("Enter positive number : ");
+  scanf("%d", &n);
+  printf("%d", factorial(n));
   return 0;
 }

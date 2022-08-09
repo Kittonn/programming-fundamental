@@ -2,10 +2,23 @@
 
 #include <stdio.h>
 
+long int factorial(int n)
+{
+  long int a = 1;
+
+  for (int i = 1; i <= n; i++)
+  {
+    a *= i;
+  }
+
+  return a;
+}
+
 int main()
 {
-  int a,b;
-  scanf("%d %d", &a, &b);
-  printf("%d\n%d\n%d\n%d", a + b, a - b, a * b, a / b);
+  int n;
+  printf("Enter positive number : ");
+  scanf("%d", &n);
+  printf("%d", factorial(n));
   return 0;
 }
