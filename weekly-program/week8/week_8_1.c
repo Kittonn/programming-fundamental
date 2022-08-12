@@ -1,3 +1,5 @@
+// 65010077 - นายกิตติพศ หลำบางช้าง
+
 #include <stdio.h>
 
 void morse_code(char c)

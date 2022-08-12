@@ -1,3 +1,5 @@
+// 65010077 - นายกิตติพศ หลำบางช้าง
+
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
@@ -39,7 +41,13 @@ int main()
     if(text[i] >= 97 || text[i] <= 122) {
       text[i] = toupper(text[i]);
     }
-    printf("%s ",morse[text[i] % 65]);
+    if (text[i] == ' ')
+    {
+      printf(" ");
+    } else {
+      printf("%s ",morse[text[i] % 65]);
+    }
+    
   }
   
   

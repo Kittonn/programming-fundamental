@@ -1,3 +1,5 @@
+// 65010077 - นายกิตติพศ หลำบางช้าง
+
 #include <stdio.h>
 
 int max(int a,int b) {

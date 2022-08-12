@@ -3,3 +3,4 @@ test.c
 .vscode
 *.json
 .vs
+test1.c
