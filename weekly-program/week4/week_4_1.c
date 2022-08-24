@@ -1,20 +1,28 @@
 // 65010077 - นายกิตติพศ หลำบางช้าง
 
 #include <stdio.h>
+#include <string.h>
 
 int main()
 {
-  int n, hr = 0, min = 0, sec = 0;
-  scanf("%d", &n);
-  if (n >= 3600)
+  char s[100];
+  scanf("%[^\n]s", &s);
+  int len = strlen(s);
+  for (int i = 0; i < len; i++)
   {
-    hr = n / 3600;
-    n %= 3600;
+    if (s[i] >= 'a' && s[i] <= 'z')
+    {
+      printf("%c", s[i] - 32);
+    }
+    else if (s[i] >= 'A' && s[i] <= 'Z')
+    {
+      printf("%c", s[i] + 32);
+    }
+    else
+    {
+      printf("%c", s[i]);
+    }
   }
 
-  min = n / 60;
-  sec = n % 60;
-
-  printf("%d:%02d:%02d", hr, min, sec);
   return 0;
 }
