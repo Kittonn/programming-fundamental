@@ -20,6 +20,6 @@ int main()
     first = 0.5 * (second + (n / second));
     second = 0.5 * (first + (n / first));
   }
-  printf("%lf %lf", first, second);
+  printf("%lf", first);
   return 0;
 }

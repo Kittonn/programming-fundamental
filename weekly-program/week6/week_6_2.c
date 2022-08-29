@@ -27,7 +27,7 @@ int main()
     second = b - ((a * a) / (2 * b));
   }
 
-  printf("%lf %lf", first, second);
+  printf("%lf", first);
 
   return 0;
 }
