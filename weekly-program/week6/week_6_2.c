@@ -3,18 +3,22 @@
 // Using Bakhshali method
 #include <stdio.h>
 
+double countDigits(int n) {
+  int c;
+  while (n != 0)
+  {
+    n /= 10;
+    c++;
+  }
+  return c;
+}
+
 int main()
 {
   int n;
   scanf("%d", &n);
+  double first = countDigits(n), second = 0, a = 0, b = 0;
 
-  int newN = n;
-  double first = 0, second = 0, a = 0, b = 0;
-  while (newN > 0)
-  {
-    newN /= 10;
-    first++;
-  }
   second = first * 100;
 
   while (second != first)

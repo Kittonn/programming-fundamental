@@ -1,29 +1,49 @@
 // 65010077 - นายกิตติพศ หลำบางช้าง
 
 #include <stdio.h>
-#include <stdlib.h>
+#include <string.h>
 
 int main()
 {
-  int n[2], i = 0, s = 0;
-  FILE *fr, *fw;
-  fr = fopen("./a.txt", "r+");
-  fw = fopen("./b.txt", "w");
-  if (fr == NULL)
+  char str[100];
+  int encrypt[100][100], col = 0, row = 0, key, reversedRow = 1, isReversed = 0;
+  scanf("%[^\n]s", &str);
+  scanf("%d", &key);
+  int len = strlen(str);
+  for (int i = 0; i < key; i++)
   {
-    printf("Error!");
-    exit(1);
+    for (int j = 0; j < len; j++)
+    {
+      encrypt[i][j] = 0;
+    }
   }
-  while (fscanf(fr, "%d", &n[i]) != EOF)
+
+  for (int i = 0; i < len; i++)
   {
-    i++;
+    encrypt[row][col] = str[i];
+    if (row == 0)
+    {
+      isReversed = 0;
+    }
+    if (row == key - 1)
+    {
+      isReversed = 1;
+    }
+    reversedRow = isReversed ? -1 : 1;
+    row += reversedRow;
+    col++;
   }
-  for (int i = 0; i < sizeof(n) / sizeof(n[0]); i++)
+
+  for (int i = 0; i < key; i++)
   {
-    s += n[i];
+    for (int j = 0; j < len; j++)
+    {
+      if (encrypt[i][j] != 0 && encrypt[i][j] != ' ')
+      {
+        printf("%c", encrypt[i][j]);
+      }
+    }
   }
-  fprintf(fw, "%d", s);
-  fclose(fw);
-  fclose(fr);
+
   return 0;
 }

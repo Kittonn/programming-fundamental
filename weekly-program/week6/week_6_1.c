@@ -3,17 +3,22 @@
 // Using Babylonian method
 #include <stdio.h>
 
+double countDigits(int n) {
+  int c = 0;
+  while (n != 0)
+  {
+    n /= 10;
+    c++;
+  }
+  return c;
+}
+
 int main()
 {
   int n;
   scanf("%d", &n);
-  double first = 0, second = 0;
-  int newN = n;
-  while (newN > 0)
-  {
-    newN /= 10;
-    first++;
-  }
+  double first = countDigits(n), second = 0;
+  
   second = first * 100;
   while (first != second)
   {
