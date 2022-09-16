@@ -4,11 +4,11 @@
 
 int main()
 {
-  int a,b;
-  scanf("%d %d",&a,&b);
-  a = a ^ b;
-  b = a ^ b;
-  a = a ^ b;
-  printf("swab : %d %d",a,b);
+  int x, y;
+  scanf("%d %d", &x, &y);
+  x = x ^ y;
+  y = x ^ y;
+  x = x ^ y;
+  printf("swab : %d %d", x, y);
   return 0;
 }

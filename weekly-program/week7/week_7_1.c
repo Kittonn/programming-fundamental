@@ -4,11 +4,11 @@
 
 int main()
 {
-  int a,b;
-  scanf("%d %d",&a,&b);
-  a += b;
-  b = a - b;
-  a -= b;
-  printf("swab : %d %d",a,b);
+  int x, y;
+  scanf("%d %d", &x, &y);
+  x += y;
+  y = x - y;
+  x -= y;
+  printf("swab : %d %d", x, y);
   return 0;
 }
